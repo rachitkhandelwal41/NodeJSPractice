@@ -1,0 +1,92 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Yatri - Sign Up
+  style.
+    /* Reset & base */
+    * {
+    box-sizing: border-box;
+    }
+    body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    /* Container */
+    .signup-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 520px;
+    text-align: center;
+    }
+    /* Heading */
+    .signup-container h1 {
+    color: #0077cc;
+    margin-bottom: 30px;
+    font-weight: 600;
+    }
+    /* Form */
+    form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+    padding: 12px 15px;
+    font-size: 1em;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+    outline: none;
+    border-color: #0077cc;
+    }
+    /* Buttons container */
+    .buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    }
+    button {
+    flex: 1;
+    padding: 12px 0;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+    }
+    button.register {
+    background-color: #0077cc;
+    }
+    button.register:hover {
+    background-color: #005fa3;
+    }
+    button.cancel {
+    background-color: #999;
+    }
+    button.cancel:hover {
+    background-color: #666;
+    }
+.signup-container
+  h1 New User Account Creation
+  form
+    input(type='text' placeholder='Username' name='username' required='')
+    input(type='email' placeholder='Email' name='email' required='')
+    input(type='password' placeholder='Password' name='password' required='')
+    .buttons
+      button.register(type='submit') Register
+      button.cancel(type='button' onclick='window.history.back()') Cancel
