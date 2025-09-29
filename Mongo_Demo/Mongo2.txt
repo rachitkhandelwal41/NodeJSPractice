@@ -164,7 +164,7 @@ db.products.find({})
   .sort({ createdAt: -1 })
   .limit(5)
 
-Q9. Find all categories having more than 5 products.
+Q9. Find all categories having more than 2 products.
 
 db.products.aggregate([
   {
@@ -173,7 +173,7 @@ db.products.aggregate([
       count: { $sum: 1 }
     }
   },
-  { $match: { count: { $gt: 5 } } }
+  { $match: { count: { $gt: 2 } } }
 ])
 
 Q10. Get the top 2 categories with the highest total revenue (price × stock).
